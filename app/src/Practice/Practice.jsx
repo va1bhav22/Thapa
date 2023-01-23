@@ -23,6 +23,7 @@ const Practice = () => {
     >   
       Count: {count}
     </h2>
+    <h2></h2>
 
     <button onClick={() => setCount(current => current + 1)}>
       Increment
