@@ -1,4 +1,5 @@
 import "./App.css";
+import Practice from "./Practice/Practice";
 import MainRoute from "./Routes/MainRoute";
 import { BrowserRouter } from "react-router-dom";
 function App() {
@@ -6,9 +7,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
 
-        <MainRoute />
+        {/* <MainRoute /> */}
      
       </BrowserRouter>
+      <Practice/>
     </div>
   );
 }
