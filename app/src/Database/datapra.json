@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "vaibhav",
+      "img": "https://avatars.githubusercontent.com/u/95289821?v=4",
+      "display":true
+    },
+    {
+      "id": 2,
+      "title": "saif",
+      "img": "https://avatars.githubusercontent.com/u/98679704?s=100&v=4",
+      "display":true
+    },
+    {
+      "id": 3,
+      "title": "preeti",
+      "img": "https://avatars.githubusercontent.com/u/97448477?s=100&v=4",
+      "display":true
+    },
+    {
+      "id": 4,
+      "title": "swpanil",
+      "img":"https://avatars.githubusercontent.com/u/99746007?s=100&v=4",
+      "display":false
+    }
+  ]
+  
+}

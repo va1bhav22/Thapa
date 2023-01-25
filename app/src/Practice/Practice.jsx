@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useState} from 'react';
 import "./Practice.css"
+import axios from "axios"
 const Practice = () => {
     const [count, setCount] = useState(0);
+    const [data,setData]=useState([])
+   function dataFech(){
+    axios.get("http://localhost:8080/posts").then(r=>setData(r.data)).catch(e=>console.log(e))
+   }
+    useEffect(() => {
+      dataFech()
+    }, [])
   return (
     <div>
     <h2
@@ -23,11 +31,24 @@ const Practice = () => {
     >   
       Count: {count}
     </h2>
-    <h2></h2>
+    <h2>bsahshbdsdbsjdbjs</h2>
 
     <button onClick={() => setCount(current => current + 1)}>
       Increment
     </button>
+      
+    <div>
+      {
+data.map((ele)=>{
+  return(
+    <div className='disp' style={ele.display===false?{display:"none"}: {display :"block"}}>
+     {/* {ele.display===true ? </div> : null} */}
+     <div><img src={ele.img} alt="" /> </div>
+    </div>
+  )
+})
+      }
+    </div>
   </div>
   )
 }
