@@ -1,4 +1,4 @@
-// create a context
+  // create a context
 // Provider
 // consumer => useContext Hook
 import { createContext, useContext, useEffect } from "react";
@@ -11,7 +11,7 @@ const API ="https://api.pujakaitem.com/api/products"
 const AppProvider = ({ children }) => {
 
    const getProducts=async(url)=>{
-     const res = await axios.get(url)
+        const res = await axios.get(url)
      const products = await res.data;
      
     //  const 

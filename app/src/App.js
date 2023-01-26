@@ -1,4 +1,5 @@
 import "./App.css";
+import LoadingSpinner from "./Practice/LoadingSpinner";
 import Practice from "./Practice/Practice";
 import MainRoute from "./Routes/MainRoute";
 import { BrowserRouter } from "react-router-dom";
@@ -10,7 +11,8 @@ function App() {
         {/* <MainRoute /> */}
      
       </BrowserRouter>
-      <Practice/>
+      {/* <LoadingSpinner/> */}
+      {/* <Practice/> */}
     </div>
   );
 }

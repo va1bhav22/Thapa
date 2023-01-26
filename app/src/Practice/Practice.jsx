@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Practice.css";
 import axios from "axios";
+import LoadingSpinner from "./LoadingSpinner";
 const Practice = () => {
   const [count, setCount] = useState(0);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   function dataFech() {
     setLoading(true);
-    // setTimeout(() => {
+    setTimeout(() => {
       axios
         .get("http://localhost:8080/posts")
         .then((r) => {
@@ -16,14 +17,14 @@ const Practice = () => {
           setData(r.data);
         })
         .catch((e) => console.log(e));
-    // }, 3000);
+    }, 1000);
   }
   useEffect(() => {
     dataFech();
   }, []);
   return <div>
     {
-      loading ? ( <div>Loading/........</div> ) :(
+      loading ? ( <div><LoadingSpinner/></div> ) :(
         <div>
         <h2
         style={{
